@@ -65,10 +65,17 @@
           <a class="nav-link${navClass("index.html")}" href="index.html">Home</a>
           <a class="nav-link${navClass("about.html")}" href="about.html">About</a>
           <div class="nav-dropdown">
-            <button class="nav-dropdown__button${navClass("services")}" type="button" aria-expanded="false" data-dropdown-toggle>
-              Services ${icon("chevron-down")}
-            </button>
+            <div class="nav-dropdown__trigger">
+              <a class="nav-link nav-dropdown__link${navClass("services")}" href="all-services.html">Services</a>
+              <button class="nav-dropdown__button" type="button" aria-expanded="false" aria-label="Toggle services menu" data-dropdown-toggle>
+                ${icon("chevron-down")}
+              </button>
+            </div>
             <div class="nav-dropdown__menu" data-services-dropdown>
+              <a class="dropdown-service dropdown-service--all" href="all-services.html">
+                ${icon("layout-grid")}
+                <span>All Services<small>Browse every siding service page in one place.</small></span>
+              </a>
               ${dropdownLinks()}
             </div>
           </div>
@@ -284,17 +291,21 @@
 
   function bindHeader() {
     const header = document.querySelector("[data-site-header]");
+    const dropdown = document.querySelector(".nav-dropdown");
     const dropdownToggle = document.querySelector("[data-dropdown-toggle]");
 
-    if (dropdownToggle && !dropdownToggle.dataset.bound) {
+    if (dropdown && dropdownToggle && !dropdownToggle.dataset.bound) {
       dropdownToggle.dataset.bound = "true";
       dropdownToggle.addEventListener("click", () => {
         const expanded = dropdownToggle.getAttribute("aria-expanded") === "true";
-        dropdownToggle.setAttribute("aria-expanded", String(!expanded));
+        const nextExpanded = String(!expanded);
+        dropdownToggle.setAttribute("aria-expanded", nextExpanded);
+        dropdown.classList.toggle("is-open", !expanded);
       });
       document.addEventListener("click", (event) => {
         if (!event.target.closest(".nav-dropdown")) {
           dropdownToggle.setAttribute("aria-expanded", "false");
+          dropdown.classList.remove("is-open");
         }
       });
     }

@@ -86,8 +86,8 @@
         className: "home-hero",
         image: "assets/images/hero-home.jpg",
         outline: "Siding",
-        title: "Compare Siding Provider Options With Better Clarity",
-        titleLines: ["Compare Siding", "Provider Options", "With Better", "Clarity"],
+        title: "Compare Siding Provider Options",
+        titleLines: ["Compare Siding", "Provider Options",],
         text: "Exterra helps homeowners submit siding project details and review available local siding provider options. We are an independent matching platform, not a siding contractor.",
         buttons: [
           { label: "Start Your Request", href: "contact.html", variant: "btn-primary" },
