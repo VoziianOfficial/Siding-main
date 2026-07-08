@@ -1,0 +1,175 @@
+.contact-strip {
+  background: var(--color-beige);
+}
+
+.contact-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(14, 42, 71, 0.14);
+}
+
+.contact-strip__item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  background: var(--color-cream);
+  padding: 1.1rem;
+}
+
+.contact-strip__item svg {
+  color: var(--color-red);
+}
+
+.contact-form {
+  background: var(--color-white);
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-form__info {
+  display: grid;
+  align-content: space-between;
+  gap: 2rem;
+  background: var(--color-blue-dark);
+  color: var(--color-beige-soft);
+  padding: 2rem;
+}
+
+.contact-form__info h2 {
+  color: var(--color-white);
+  font-size: 3.4rem;
+}
+
+.contact-form__info p {
+  color: rgba(245, 238, 228, 0.76);
+}
+
+.contact-form__info-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form__info-list li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.contact-form__info-list svg {
+  color: var(--color-red);
+}
+
+.contact-form__panel {
+  position: relative;
+  background: var(--color-cream);
+  padding: 2rem;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-steps {
+  background: var(--color-beige-soft);
+}
+
+.contact-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.contact-steps__item {
+  border-top: 3px solid var(--color-red);
+  padding-top: 1rem;
+}
+
+.contact-steps__item h2 {
+  color: var(--color-blue);
+  font-size: 2.2rem;
+}
+
+.contact-tips {
+  background: var(--color-white);
+}
+
+.contact-tips__grid {
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-tips__round {
+  width: min(430px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 12px solid var(--color-beige-soft);
+}
+
+.contact-tips__list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.3rem;
+}
+
+.contact-tips__list li {
+  border-left: 3px solid var(--color-red);
+  padding-left: 0.85rem;
+}
+
+.contact-availability {
+  background: var(--color-beige);
+}
+
+.contact-availability__box {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.1rem;
+  align-items: center;
+  background: var(--color-cream);
+  padding: 1.5rem;
+}
+
+.contact-availability__box svg {
+  width: 58px;
+  height: 58px;
+  color: var(--color-red);
+}
+
+.contact-faq {
+  background: var(--color-white);
+}
+
+@media (max-width: 900px) {
+  .contact-strip__grid,
+  .contact-form__grid,
+  .contact-steps__grid,
+  .contact-tips__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-form__row,
+  .contact-availability__box {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__info,
+  .contact-form__panel {
+    padding: 1.3rem;
+  }
+}

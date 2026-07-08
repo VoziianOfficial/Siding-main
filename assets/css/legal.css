@@ -1,0 +1,94 @@
+.legal-hero {
+  background:
+    linear-gradient(90deg, rgba(7, 27, 50, 0.9), rgba(7, 27, 50, 0.7)),
+    url("../images/hero-services.jpg") center / cover;
+  color: var(--color-white);
+  padding: 110px 0 72px;
+}
+
+.legal-hero h1 {
+  font-size: 5rem;
+}
+
+.legal-hero p {
+  max-width: 760px;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.legal-content {
+  background: var(--color-white);
+}
+
+.legal-content__grid {
+  display: grid;
+  grid-template-columns: 0.28fr 0.72fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.legal-content__nav {
+  position: sticky;
+  top: 110px;
+  display: grid;
+  gap: 0.55rem;
+  border-left: 3px solid var(--color-red);
+  padding-left: 1rem;
+}
+
+.legal-content__nav a {
+  color: var(--color-blue);
+  font-weight: 800;
+}
+
+.legal-article {
+  display: grid;
+  gap: 2rem;
+}
+
+.legal-article section {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.legal-article h2 {
+  color: var(--color-blue);
+  font-size: 2.4rem;
+}
+
+.legal-article p,
+.legal-article li {
+  color: var(--color-muted);
+}
+
+.legal-article ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.2rem;
+}
+
+.legal-article li {
+  list-style: disc;
+}
+
+.legal-disclaimer {
+  border-left: 4px solid var(--color-red);
+  background: var(--color-beige-soft);
+  padding: 1.2rem;
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+@media (max-width: 820px) {
+  .legal-content__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-content__nav {
+    position: static;
+  }
+
+  .legal-hero h1 {
+    font-size: 3.4rem;
+  }
+}
