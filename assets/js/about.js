@@ -147,11 +147,13 @@
 
       <section class="about-factors section-pad" aria-labelledby="factors-title">
         <div class="container about-story__grid">
-          <div class="section-heading" data-aos="fade-right">
-            <span class="eyebrow">Comparison factors</span>
-            <h2 id="factors-title">What To Review Before Choosing A Provider</h2>
-            <p>Provider comparison is strongest when the details are specific, visible, and confirmed directly by the participating provider.</p>
-          </div>
+         <div class="section-heading section-heading--sticky">
+  <div data-aos="fade-right">
+    <span class="eyebrow">Comparison factors</span>
+    <h2 id="factors-title">What To Review Before Choosing A Provider</h2>
+    <p>Provider comparison is strongest when the details are specific, visible, and confirmed directly by the participating provider.</p>
+  </div>
+</div>
           <div data-aos="fade-left">
             ${E.faqMarkup([
               { question: "Scope clarity", answer: "Ask what is included, what is excluded, and what conditions could change the final scope." },

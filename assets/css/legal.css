@@ -28,8 +28,6 @@
 }
 
 .legal-content__nav {
-  position: sticky;
-  top: 110px;
   display: grid;
   gap: 0.55rem;
   border-left: 3px solid var(--color-red);
