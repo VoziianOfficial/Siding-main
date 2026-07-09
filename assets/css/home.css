@@ -1192,3 +1192,248 @@
     height: 380px;
   }
 }
+
+/* =========================================
+   Tablet/Mobile centered layout for key home sections
+========================================= */
+
+@media (max-width: 980px) {
+
+  .home-use,
+  .home-intro,
+  .home-editorial {
+    text-align: center;
+  }
+
+  .home-use .container,
+  .home-intro .container,
+  .home-editorial .container {
+    width: min(100% - 32px, 760px);
+    margin-inline: auto;
+  }
+
+  .home-use__head,
+  .home-intro__grid,
+  .home-editorial__grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    align-items: center;
+    gap: 2.8rem;
+  }
+
+  .home-use__title,
+  .home-intro__copy,
+  .home-editorial__copy {
+    justify-items: center;
+    text-align: center;
+    padding-left: 0 !important;
+    margin-inline: auto;
+  }
+
+  .home-use__title h2,
+  .home-use__head>p,
+  .home-intro__copy h2,
+  .home-intro__copy>p,
+  .home-editorial__copy h2,
+  .home-editorial__lead,
+  .home-editorial__copy>p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-use__grid {
+    width: 100%;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .home-use__item {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .home-use__item p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-intro__bullets {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-intro__bullet {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-intro__media {
+    width: min(100%, 620px);
+    min-height: 500px;
+    margin-inline: auto;
+  }
+
+  .home-intro__photo-main {
+    left: 50% !important;
+    width: 78%;
+    height: 420px;
+    transform: translateX(-58%);
+  }
+
+  .home-intro__photo-round {
+    right: auto !important;
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    transform: translateX(8%);
+  }
+
+  .home-intro__badge {
+    left: 50% !important;
+    bottom: 1.4rem;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .home-editorial__media {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+
+  .home-editorial__photo--single {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-editorial__meta {
+    justify-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .home-use .container,
+  .home-intro .container,
+  .home-editorial .container {
+    width: min(100% - 28px, 440px);
+  }
+
+  .home-use__head,
+  .home-intro__grid,
+  .home-editorial__grid {
+    gap: 2.2rem;
+  }
+
+  .home-use__grid {
+    max-width: 420px;
+  }
+
+  .home-use__item {
+    padding: 1.55rem;
+  }
+
+  .home-intro__media {
+    width: 100%;
+    min-height: 430px;
+  }
+
+  .home-intro__photo-main {
+    left: 50% !important;
+    width: 86%;
+    height: 350px;
+    transform: translateX(-55%);
+  }
+
+  .home-intro__photo-round {
+    left: 50%;
+    width: 215px;
+    height: 215px;
+    transform: translateX(2%);
+    border-width: 8px;
+  }
+
+  .home-intro__badge {
+    width: min(240px, calc(100% - 2rem));
+  }
+
+  .home-editorial__photo--single {
+    width: 100%;
+    height: 380px;
+  }
+
+  .home-editorial__meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix home intro media overflow on tablet/mobile */
+@media (max-width: 980px) {
+  .home-intro__media {
+    width: 100%;
+    max-width: 620px;
+    min-height: 500px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  .home-intro__media[data-aos] {
+    transform: none !important;
+  }
+
+  .home-intro__photo-main {
+    top: 0;
+    left: 50% !important;
+    width: 88%;
+    height: 420px;
+    transform: translateX(-50%) !important;
+  }
+
+  .home-intro__photo-round {
+    right: auto !important;
+    left: 50% !important;
+    bottom: 0;
+    width: 270px;
+    height: 270px;
+    transform: translateX(-50%) !important;
+  }
+
+  .home-intro__badge {
+    left: 50% !important;
+    bottom: 1.2rem;
+    transform: translateX(-50%) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-intro__media {
+    max-width: 420px;
+    min-height: 430px;
+    overflow: hidden;
+  }
+
+  .home-intro__photo-main {
+    left: 50% !important;
+    width: 92%;
+    height: 350px;
+    transform: translateX(-50%) !important;
+  }
+
+  .home-intro__photo-round {
+    left: 50% !important;
+    width: 215px;
+    height: 215px;
+    border-width: 8px;
+    transform: translateX(-50%) !important;
+  }
+
+  .home-intro__badge {
+    width: min(240px, calc(100% - 2rem));
+  }
+}
