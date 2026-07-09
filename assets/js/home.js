@@ -137,7 +137,6 @@
           </div>
           <div class="home-intro__copy section-heading" data-aos="fade-left">
             <span class="outline-word" aria-hidden="true">Exterra</span>
-            <span class="eyebrow">Platform clarity</span>
             <h2 id="intro-title">Built To Make Siding Provider Comparison Easier</h2>
             <p>Exterra helps homeowners organize a siding request, connect with available local siding companies, and review provider options before deciding how to move forward.</p>
             <div class="home-intro__bullets">
