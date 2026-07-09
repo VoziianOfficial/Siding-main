@@ -42,6 +42,50 @@
         ]
       })}
 
+      <section class="contact-guidance section-pad" aria-labelledby="contact-guidance-title">
+  <div class="container contact-guidance__grid">
+    <figure class="image-frame contact-guidance__photo" data-aos="fade-right">
+      <img src="assets/images/card-4.jpg" alt="Homeowner reviewing siding project details" loading="lazy">
+    </figure>
+
+    <div class="contact-guidance__copy" data-aos="fade-left">
+      <span class="eyebrow contact-guidance__eyebrow">Contact Exterra</span>
+      <h2 id="contact-guidance-title">Send your siding request with clear project details</h2>
+
+      <p class="contact-guidance__lead">
+        Exterra helps homeowners organize a siding request before comparing available local provider options.
+      </p>
+
+      <p>
+        Use the contact page to share your project type, material interests, timing, and any visible exterior concerns. Clear request details can help make the next step more focused.
+      </p>
+
+      <p>
+        Exterra does not perform siding work directly. Participating providers independently manage their own pricing, scheduling, warranties, licensing, insurance, and final service terms.
+      </p>
+
+      <div class="contact-guidance__points">
+        <div class="contact-guidance__point">
+          ${E.icon("check-circle-2")}
+          <span>Share project type and exterior concerns</span>
+        </div>
+        <div class="contact-guidance__point">
+          ${E.icon("check-circle-2")}
+          <span>Include material direction if known</span>
+        </div>
+        <div class="contact-guidance__point">
+          ${E.icon("check-circle-2")}
+          <span>Review available provider options</span>
+        </div>
+        <div class="contact-guidance__point">
+          ${E.icon("check-circle-2")}
+          <span>Choose whether to continue after review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section class="contact-form section-pad" id="contact-form" aria-labelledby="form-title">
         <div class="container">
           <div class="contact-form__grid">
@@ -130,7 +174,7 @@
       <section class="contact-tips section-pad" aria-labelledby="tips-title">
         <div class="container contact-tips__grid">
           <figure class="image-frame contact-tips__round" data-aos="zoom-in">
-            <img src="assets/images/siding-detail-2.jpg" alt="Close siding detail for request planning" loading="lazy">
+            <img src="assets/images/card-3.jpg" alt="Close siding detail for request planning" loading="lazy">
           </figure>
           <div data-aos="fade-left">
             <div class="section-heading">
