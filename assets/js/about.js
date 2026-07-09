@@ -57,6 +57,48 @@
         </div>
       </section>
 
+      <section class="about-service-lines section-pad" aria-labelledby="about-service-lines-title">
+  <div class="container">
+    <div class="about-service-lines__head" data-aos="fade-up">
+      <span class="eyebrow about-service-lines__eyebrow">What homeowners compare</span>
+      <h2 id="about-service-lines-title">Siding Service Paths Homeowners Can Review</h2>
+      <p>
+        Exterra helps homeowners organize siding requests and compare available local provider options across common exterior project categories.
+      </p>
+    </div>
+
+    <div class="about-service-lines__grid">
+      ${[
+        ["Siding Installation", "New exterior siding planning for fresh projects and updated curb appeal.", "house-plus", "siding-installation.html"],
+        ["Siding Replacement", "Provider options for aging, dated, or worn exterior siding systems.", "replace", "siding-replacement.html"],
+        ["Siding Repair", "Request paths for loose panels, cracks, gaps, impact damage, or storm concerns.", "badge-alert", "siding-repair.html"],
+        ["Vinyl Siding", "Compare vinyl siding options, durability direction, color planning, and provider fit.", "panel-top", "vinyl-siding.html"],
+        ["Fiber Cement Siding", "Review provider paths for fiber cement, heavier exterior materials, and trim details.", "layers", "fiber-cement-siding.html"],
+        ["Exterior Trim & Details", "Explore trim, edges, transitions, accents, and related exterior finish planning.", "ruler", "all-services.html"]
+      ]
+        .map(
+          ([title, text, icon, href], index) => `
+            <a class="about-service-lines__item" href="${href}" data-aos="fade-up" data-aos-delay="${index * 70}">
+              <span class="about-service-lines__icon">${E.icon(icon)}</span>
+              <span class="about-service-lines__content">
+                <strong>${title}</strong>
+                <small>${text}</small>
+              </span>
+              <span class="about-service-lines__arrow">${E.icon("arrow-down-right")}</span>
+            </a>`
+        )
+        .join("")}
+    </div>
+
+    <div class="about-service-lines__action" data-aos="fade-up">
+      <a class="about-service-lines__button" href="all-services.html">
+        <span>View All Services</span>
+        ${E.icon("arrow-down-right")}
+      </a>
+    </div>
+  </div>
+</section>
+
       <section class="about-contrast" aria-labelledby="contrast-title">
         <div class="container about-contrast__grid">
           <article class="about-contrast__panel about-contrast__help" data-aos="fade-up">
@@ -163,16 +205,6 @@
               { question: "Licensing and insurance verification", answer: "Check provider documentation directly before signing any agreement." }
             ])}
           </div>
-        </div>
-      </section>
-
-      <section class="about-factors section-pad" aria-labelledby="about-faq-title">
-        <div class="container about-story__grid">
-          <div class="section-heading">
-            <span class="eyebrow">FAQ</span>
-            <h2 id="about-faq-title">About Exterra FAQs</h2>
-          </div>
-          <div>${E.faqMarkup(faqs)}</div>
         </div>
       </section>
 
