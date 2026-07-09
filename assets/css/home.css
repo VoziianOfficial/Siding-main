@@ -77,17 +77,18 @@
 
 .home-intro__photo-main {
   position: absolute;
-  inset: 0 auto auto 0;
-  width: 72%;
-  height: 520px;
+  top: 0;
+  left: -10%;
+  width: 82%;
+  height: 545px;
 }
 
 .home-intro__photo-round {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 310px;
-  height: 310px;
+  width: 335px;
+  height: 335px;
   border: 12px solid var(--color-white);
   border-radius: 50%;
 }
