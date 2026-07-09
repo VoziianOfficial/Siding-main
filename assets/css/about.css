@@ -805,3 +805,243 @@
     font-size: 2.5rem;
   }
 }
+
+@media (max-width: 980px) {
+  .about-story .container,
+  .about-growth .container,
+  .about-service-lines .container,
+  .about-contrast .container,
+  .about-mission .container,
+  .about-flow .container,
+  .about-clarity .container,
+  .about-route .container,
+  .about-factors .container {
+    width: min(100% - 32px, 760px);
+    margin-inline: auto;
+  }
+
+  .about-story__grid,
+  .about-growth__grid,
+  .about-contrast__grid,
+  .about-mission__grid,
+  .about-clarity__grid,
+  .about-route__strip,
+  .about-factors .about-story__grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    align-items: center;
+    gap: 2.8rem;
+    text-align: center;
+  }
+
+  .about-story .section-heading,
+  .about-growth__copy,
+  .about-service-lines__head,
+  .about-mission .section-heading,
+  .about-clarity__quote,
+  .about-factors .section-heading,
+  .about-route__strip > div {
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .about-story h2,
+  .about-story p,
+  .about-growth__copy h2,
+  .about-growth__lead,
+  .about-growth__copy p,
+  .about-service-lines__head h2,
+  .about-service-lines__head p,
+  .about-mission h2,
+  .about-mission p,
+  .about-clarity h2,
+  .about-clarity p,
+  .about-factors h2,
+  .about-factors p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-story__photo,
+  .about-growth__media,
+  .about-mission__round,
+  .about-clarity__photo {
+    width: 100%;
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .about-story__photo,
+  .about-clarity__photo {
+    min-height: clamp(320px, 48vw, 420px);
+  }
+
+  .about-growth__media {
+    justify-items: center;
+  }
+
+  .about-growth__photo {
+    width: 100%;
+  }
+
+  .about-growth__note {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .about-service-lines__grid,
+  .about-flow__steps {
+    width: 100%;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .about-service-lines__item {
+    text-align: left;
+  }
+
+  .about-contrast__panel {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-mission__round {
+    justify-self: center;
+  }
+
+  .about-mission__lines {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+
+  .about-flow__steps {
+    grid-template-columns: 1fr !important;
+    gap: 1.35rem;
+  }
+
+  .about-flow__step {
+    width: 100%;
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .about-flow__step h3,
+  .about-flow__step p {
+    max-width: 100%;
+  }
+
+  .about-clarity__quote.section-heading--sticky,
+  .section-heading--sticky {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  .about-clarity__quote {
+    width: 100%;
+  }
+
+  .about-clarity__list {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .about-route__links {
+    justify-content: center;
+  }
+
+  .about-story [data-aos],
+  .about-growth [data-aos],
+  .about-service-lines [data-aos],
+  .about-contrast [data-aos],
+  .about-mission [data-aos],
+  .about-flow [data-aos],
+  .about-clarity [data-aos],
+  .about-route [data-aos],
+  .about-factors [data-aos] {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-story .container,
+  .about-growth .container,
+  .about-service-lines .container,
+  .about-contrast .container,
+  .about-mission .container,
+  .about-flow .container,
+  .about-clarity .container,
+  .about-route .container,
+  .about-factors .container {
+    width: min(100% - 28px, 440px);
+  }
+
+  .about-story__grid,
+  .about-growth__grid,
+  .about-contrast__grid,
+  .about-mission__grid,
+  .about-clarity__grid,
+  .about-route__strip,
+  .about-factors .about-story__grid {
+    gap: 2.2rem;
+  }
+
+  .about-story h2,
+  .about-growth__copy h2,
+  .about-service-lines__head h2,
+  .about-mission h2,
+  .about-clarity h2,
+  .about-factors h2 {
+    font-size: 2.55rem;
+    line-height: 1.05;
+  }
+
+  .about-growth__lead {
+    font-size: 1.08rem;
+  }
+
+  .about-growth__photo--top {
+    height: 320px;
+  }
+
+  .about-growth__photo--bottom {
+    height: 210px;
+  }
+
+  .about-service-lines__grid,
+  .about-flow__steps {
+    grid-template-columns: 1fr !important;
+    max-width: 420px;
+  }
+
+  .about-service-lines__item {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about-service-lines__content small {
+    margin-inline: auto;
+  }
+
+  .about-service-lines__arrow {
+    display: none;
+  }
+
+  .about-route__links {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-route__links .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
