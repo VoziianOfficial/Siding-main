@@ -159,6 +159,38 @@
         </div>
       </section>
 
+      <section class="home-use section-pad" aria-labelledby="home-use-title">
+  <div class="container">
+    <div class="home-use__head">
+      <div class="home-use__title" data-aos="fade-right">
+        <span class="eyebrow">Why homeowners use it</span>
+        <h2 id="home-use-title">Focused on clear, safe siding comparison.</h2>
+      </div>
+      <p data-aos="fade-left">
+        Exterra is built for real-life siding decisions: aging panels, exterior updates, damaged sections, material choices, replacement planning, and provider comparison.
+      </p>
+    </div>
+
+    <div class="home-use__grid">
+      ${[
+        ["No direct service claims", "Exterra does not claim to be the contractor, installer, repair company, inspector, or material provider. We help connect homeowners with independent providers."],
+        ["Better request quality", "A clear intake gives local providers enough context to decide whether they may be able to help and what details they need next."],
+        ["Full siding categories", "Installation, replacement, repair, vinyl, fiber cement, wood-look, composite, trim, and exterior planning paths are covered."],
+        ["Responsibility stays clear", "Homeowners should verify credentials, insurance, written estimates, warranties, references, and local requirements before work is performed."]
+      ]
+        .map(
+          ([title, text], index) => `
+            <article class="home-use__item" data-aos="fade-up" data-aos-delay="${index * 70}">
+              <span class="home-use__number">${String(index + 1).padStart(2, "0")}</span>
+              <h3>${title}</h3>
+              <p>${text}</p>
+            </article>`
+        )
+        .join("")}
+    </div>
+  </div>
+</section>
+
       <section class="home-slider section-pad" aria-labelledby="popular-title">
         <div class="container">
           <div class="home-slider__top">
