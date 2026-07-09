@@ -67,6 +67,44 @@
         </div>
       </section>
 
+      <section class="services-about section-pad" aria-labelledby="services-about-title">
+  <div class="container services-about__grid">
+    <div class="services-about__copy" data-aos="fade-right">
+      <span class="eyebrow services-about__eyebrow">About service matching</span>
+      <h2 id="services-about-title">A clearer way to review siding service paths</h2>
+
+      <p class="services-about__lead">
+        Exterra helps homeowners understand common siding project categories before comparing available local provider options.
+      </p>
+
+      <p>
+        Whether your request is focused on new siding, replacement, repair, vinyl, fiber cement, or exterior trim details, the platform helps organize the first step with clearer project information.
+      </p>
+
+      <p>
+        Exterra does not perform siding work directly. Participating providers independently handle final pricing, scheduling, warranties, licensing, insurance, and service terms.
+      </p>
+
+      <a class="services-about__link" href="contact.html">
+        <span>Start Your Request</span>
+        ${E.icon("arrow-down-right")}
+      </a>
+    </div>
+
+    <div class="services-about__stats" data-aos="fade-left">
+      <article class="services-about__stat">
+        <strong>0 6</strong>
+        <span>Service paths</span>
+      </article>
+
+      <article class="services-about__stat">
+        <strong>0 3</strong>
+        <span>Simple comparison steps</span>
+      </article>
+    </div>
+  </div>
+</section>
+
       <section class="services-switcher section-pad" aria-labelledby="switcher-title">
         <div class="container services-switcher__grid">
           <figure class="image-frame services-switcher__image" data-service-switch-image data-aos="fade-right">
