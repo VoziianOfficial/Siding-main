@@ -27,6 +27,186 @@
       .join("");
   }
 
+  function cfg(path, fallback = "") {
+    return String(path || "")
+      .split(".")
+      .reduce((object, key) => (object && object[key] !== undefined ? object[key] : undefined), CFG) ?? fallback;
+  }
+
+  function cfgText(path, fallback = "") {
+    return escapeHtml(cfg(path, fallback));
+  }
+
+  function cfgHref(path, fallback = "") {
+    return escapeHtml(cfg(path, fallback));
+  }
+
+  function fullAddress(separator = ", ") {
+    return [
+      CFG.company?.address,
+      CFG.company?.cityStateZip,
+      CFG.company?.country
+    ]
+      .filter(Boolean)
+      .join(separator);
+  }
+
+  function configTokenText(value) {
+    return String(value || "").replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_, path) => cfg(path, ""));
+  }
+
+  function configTokenHtml(value) {
+    return escapeHtml(configTokenText(value));
+  }
+
+  function contactLink(type, className = "", label = "") {
+    const safeClass = className ? ` class="${escapeHtml(className)}"` : "";
+
+    if (type === "phone") {
+      return `<a${safeClass} href="${cfgHref("contact.phoneHref")}">${escapeHtml(label || cfg("contact.phoneDisplay"))}</a>`;
+    }
+
+    if (type === "email") {
+      return `<a${safeClass} href="${cfgHref("contact.emailHref")}">${escapeHtml(label || cfg("contact.email"))}</a>`;
+    }
+
+    if (type === "map") {
+      return `<a${safeClass} href="${cfgHref("company.mapHref")}" target="_blank" rel="noopener">${escapeHtml(label || fullAddress())}</a>`;
+    }
+
+    return "";
+  }
+
+  function escapeRegExp(value) {
+    return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function preserveCaseReplacement(match, replacement) {
+    if (!replacement) return "";
+
+    if (match === match.toUpperCase()) {
+      return String(replacement).toUpperCase();
+    }
+
+    return String(replacement);
+  }
+
+  function configReplacementMap() {
+    return [
+      {
+        from: "Exterra Matching LLC",
+        to: cfg("company.legalName", "Exterra Matching LLC")
+      },
+      {
+        from: "EXTERRA",
+        to: cfg("brand.name", "Exterra").toUpperCase()
+      },
+      {
+        from: "Exterra",
+        to: cfg("brand.name", "Exterra")
+      },
+      {
+        from: "hello@exterra.com",
+        to: cfg("contact.email", "hello@exterra.com")
+      },
+      {
+        from: "mailto:hello@exterra.com",
+        to: cfg("contact.emailHref", "mailto:hello@exterra.com")
+      },
+      {
+        from: "+1 (555) 018-4627",
+        to: cfg("contact.phoneDisplay", "+1 (555) 018-4627")
+      },
+      {
+        from: "tel:+15550184627",
+        to: cfg("contact.phoneHref", "tel:+15550184627")
+      }
+    ].filter((item) => item.from && item.to && item.from !== item.to);
+  }
+
+  function replaceConfigTokens(value) {
+    let output = String(value || "");
+
+    configReplacementMap().forEach(({ from, to }) => {
+      output = output.replace(
+        new RegExp(escapeRegExp(from), "g"),
+        (match) => preserveCaseReplacement(match, to)
+      );
+    });
+
+    return output;
+  }
+
+  function applyConfigReplacements(root = document.body) {
+    if (!root) return;
+
+    const ignoredTags = new Set(["SCRIPT", "STYLE", "NOSCRIPT", "IFRAME"]);
+
+    const walker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          if (!parent || ignoredTags.has(parent.tagName)) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+
+    const textNodes = [];
+
+    while (walker.nextNode()) {
+      textNodes.push(walker.currentNode);
+    }
+
+    textNodes.forEach((node) => {
+      const nextValue = replaceConfigTokens(node.nodeValue);
+      if (nextValue !== node.nodeValue) {
+        node.nodeValue = nextValue;
+      }
+    });
+
+    const attrs = [
+      "alt",
+      "aria-label",
+      "title",
+      "placeholder",
+      "href",
+      "value",
+      "content"
+    ];
+
+    root.querySelectorAll("*").forEach((node) => {
+      attrs.forEach((attr) => {
+        if (!node.hasAttribute(attr)) return;
+
+        const currentValue = node.getAttribute(attr);
+        const nextValue = replaceConfigTokens(currentValue);
+
+        if (nextValue !== currentValue) {
+          node.setAttribute(attr, nextValue);
+        }
+      });
+    });
+
+    if (document.title) {
+      document.title = replaceConfigTokens(document.title);
+    }
+
+    document.querySelectorAll("meta[name='description']").forEach((meta) => {
+      const currentValue = meta.getAttribute("content") || "";
+      const nextValue = replaceConfigTokens(currentValue);
+
+      if (nextValue !== currentValue) {
+        meta.setAttribute("content", nextValue);
+      }
+    });
+  }
+
   function isServicesPage() {
     return currentPage === "all-services.html" || services.some((service) => service.url === currentPage);
   }
@@ -493,6 +673,7 @@
 
   function initDynamicUi() {
     injectConfigData();
+    applyConfigReplacements();
     bindAccordions();
     initLibraries();
   }
@@ -612,7 +793,16 @@
     addFaqSchema,
     matchServices,
     pageReady,
-    initDynamicUi
+    initDynamicUi,
+    cfg,
+    cfgText,
+    cfgHref,
+    fullAddress,
+    configTokenText,
+    configTokenHtml,
+    contactLink,
+    applyConfigReplacements,
+    replaceConfigTokens
   };
 
   document.addEventListener("DOMContentLoaded", () => {

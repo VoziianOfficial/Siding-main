@@ -42,21 +42,21 @@
         ]
       })}
 
-      <section class="contact-info-cards section-pad-sm" aria-label="Contact information">
+<section class="contact-info-cards section-pad-sm" aria-label="Contact information">
   <div class="container contact-info-cards__grid">
     ${[
-        ["Call", "Speak with our matching team", "phone", "tel:+10000000000"],
-        ["Email", "Send project details anytime", "mail", "mailto:info@example.com"],
-        ["Location", "Independent provider matching", "map-pin", "contact.html"],
-        ["Request", "Start a siding comparison request", "clipboard-edit", "#contact-form"]
+        ["Call", E.cfg("contact.phoneDisplay"), "phone", E.cfg("contact.phoneHref")],
+        ["Email", E.cfg("contact.email"), "mail", E.cfg("contact.emailHref")],
+        ["Location", E.fullAddress(), "map-pin", E.cfg("company.mapHref")],
+        ["Request", E.cfg("contact.phoneButtonText", "Start Request"), "clipboard-edit", "#contact-form"]
       ]
         .map(
           ([title, text, icon, href], index) => `
-          <a class="contact-info-cards__item" href="${href}" data-aos="fade-up" data-aos-delay="${index * 70}">
+          <a class="contact-info-cards__item" href="${E.escapeHtml(href)}" data-aos="fade-up" data-aos-delay="${index * 70}">
             <span class="contact-info-cards__icon">${E.icon(icon)}</span>
             <span class="contact-info-cards__content">
-              <strong>${title}</strong>
-              <small>${text}</small>
+              <strong>${E.escapeHtml(title)}</strong>
+              <small>${E.escapeHtml(text)}</small>
             </span>
             <span class="contact-info-cards__arrow">${E.icon("arrow-up-right")}</span>
           </a>`
