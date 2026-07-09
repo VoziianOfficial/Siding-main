@@ -211,7 +211,7 @@
           <figure class="image-frame about-clarity__photo" data-aos="fade-right">
             <img src="assets/images/siding-texture-2.jpg" alt="Close siding texture and exterior finish" loading="lazy">
           </figure>
-          <div class="about-clarity__quote" data-aos="fade-left">
+          <div class="about-clarity__quote section-heading--sticky" data-aos="fade-left">
             <h2 id="clarity-title">Clarity Starts Before The Estimate</h2>
             <p>A stronger request helps homeowners compare provider communication, material direction, timeline assumptions, and scope details with less guesswork.</p>
             <ul class="about-clarity__list">
@@ -219,6 +219,19 @@
               <li>Describe visible siding condition and material interests.</li>
               <li>Ask providers for final licensing, insurance, warranty, and term details.</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+        <section class="about-route section-pad-sm" aria-labelledby="route-title">
+        <div class="container about-route__strip">
+          <div>
+            <span class="eyebrow">Next route</span>
+            <h2 id="route-title">Contact Or Review Service Paths</h2>
+          </div>
+          <div class="about-route__links">
+            <a class="btn btn-primary" href="contact.html"><span>Start Request</span>${E.icon("arrow-up-right")}</a>
+            <a class="btn btn-light" href="all-services.html"><span>All Services</span>${E.icon("arrow-up-right")}</a>
           </div>
         </div>
       </section>
@@ -240,19 +253,6 @@
               { question: "Estimate detail", answer: "Compare line items, access assumptions, disposal, prep, and next-step requirements." },
               { question: "Licensing and insurance verification", answer: "Check provider documentation directly before signing any agreement." }
             ])}
-          </div>
-        </div>
-      </section>
-
-      <section class="about-route section-pad-sm" aria-labelledby="route-title">
-        <div class="container about-route__strip">
-          <div>
-            <span class="eyebrow">Next route</span>
-            <h2 id="route-title">Contact Or Review Service Paths</h2>
-          </div>
-          <div class="about-route__links">
-            <a class="btn btn-primary" href="contact.html"><span>Start Request</span>${E.icon("arrow-up-right")}</a>
-            <a class="btn btn-light" href="all-services.html"><span>All Services</span>${E.icon("arrow-up-right")}</a>
           </div>
         </div>
       </section>
