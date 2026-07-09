@@ -578,13 +578,12 @@ body {
 }
 
 .mobile-menu__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: "Barlow Condensed", Arial, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  min-width: 0;
+}
+
+.mobile-menu__brand img {
+  width: 174px;
+  filter: brightness(0) invert(1) sepia(1) saturate(0.35) hue-rotate(330deg);
 }
 
 .mobile-menu__content {
@@ -1043,7 +1042,11 @@ body {
   gap: 1rem;
 }
 
-.footer-brand img {
+.footer-brand .brand-link {
+  min-width: 0;
+}
+
+.footer-brand .brand-link img {
   width: 200px;
   filter: brightness(0) invert(1) sepia(1) saturate(0.35) hue-rotate(330deg);
 }

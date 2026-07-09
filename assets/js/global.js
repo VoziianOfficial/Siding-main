@@ -98,7 +98,9 @@
     menu.setAttribute("aria-hidden", "true");
     menu.innerHTML = `
       <div class="mobile-menu__bar">
-        <a class="mobile-menu__brand" href="index.html">${escapeHtml(CFG.brand.name)}</a>
+        <a class="brand-link mobile-menu__brand" href="index.html" aria-label="${escapeHtml(CFG.brand.name)} home">
+          <img src="assets/images/logo.svg" alt="${escapeHtml(CFG.brand.name)}">
+        </a>
         <button class="icon-button" type="button" aria-label="Close menu" data-mobile-close>${icon("x")}</button>
       </div>
       <div class="mobile-menu__content">
@@ -229,7 +231,9 @@
     target.innerHTML = `
       <div class="container footer-inner">
         <div class="footer-brand">
-          <a href="index.html" aria-label="${escapeHtml(CFG.brand.name)} home"><img src="assets/images/logo.svg" alt="${escapeHtml(CFG.brand.name)}"></a>
+          <a class="brand-link" href="index.html" aria-label="${escapeHtml(CFG.brand.name)} home">
+            <img src="assets/images/logo.svg" alt="${escapeHtml(CFG.brand.name)}">
+          </a>
           <p>${escapeHtml(CFG.footer.description)}</p>
           <p class="mini-disclaimer">${escapeHtml(CFG.legal.shortDisclaimer)}</p>
         </div>
