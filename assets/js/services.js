@@ -17,6 +17,10 @@
       image: "assets/images/siding-installation.jpg",
       photoA: "assets/images/exterior-home-1.jpg",
       photoB: "assets/images/siding-detail-1.jpg",
+      photoC: "assets/images/card-1.jpg",
+      splitImage: "assets/images/card-8.jpg",
+      overviewImage: "assets/images/card-9.jpg",
+      circleImage: "assets/images/card-10.jpg",
       variant: "round",
       overview: "For new siding projects, homeowners often compare provider experience, material direction, trim detail, weather-barrier assumptions, and how clearly the next steps are explained.",
       searches: [
@@ -37,6 +41,10 @@
       image: "assets/images/siding-replacement.jpg",
       photoA: "assets/images/siding-detail-2.jpg",
       photoB: "assets/images/exterior-home-2.jpg",
+      photoC: "assets/images/card-2.jpg",
+      splitImage: "assets/images/card-11.jpg",
+      overviewImage: "assets/images/card-6.jpg",
+      circleImage: "assets/images/card-7.jpg",
       variant: "overlap",
       overview: "Replacement requests usually involve worn, outdated, damaged, or inefficient siding. A clear request helps compare provider approaches to removal, material direction, trim, and exterior condition.",
       searches: [
@@ -57,6 +65,10 @@
       image: "assets/images/siding-repair.jpg",
       photoA: "assets/images/siding-detail-3.jpg",
       photoB: "assets/images/siding-texture-1.jpg",
+      photoC: "assets/images/card-3.jpg",
+      splitImage: "assets/images/card-4.jpg",
+      overviewImage: "assets/images/card-5.jpg",
+      circleImage: "assets/images/hero-home.jpg",
       variant: "quadrant",
       overview: "Repair-focused requests may involve loose panels, cracks, gaps, impact damage, moisture concerns, or localized wear. Provider availability and suitability can vary by damage type and location.",
       searches: [
@@ -76,7 +88,11 @@
       outline: "Vinyl",
       image: "assets/images/vinyl-siding.jpg",
       photoA: "assets/images/siding-texture-2.jpg",
-      photoB: "assets/images/exterior-home-1.jpg",
+      photoB: "assets/images/exterior-home-2.jpg",
+      photoC: "assets/images/card-6.jpg",
+      splitImage: "assets/images/card-7.jpg",
+      overviewImage: "assets/images/card-8.jpg",
+      circleImage: "assets/images/card-9.jpg",
       variant: "tall",
       overview: "Vinyl siding requests often focus on practical maintenance, color direction, panel style, trim compatibility, and provider familiarity with local exterior conditions.",
       searches: [
@@ -95,8 +111,12 @@
       title: "Fiber Cement Siding",
       outline: "Cement",
       image: "assets/images/fiber-cement-siding.jpg",
-      photoA: "assets/images/service-alt-1.jpg",
+      photoA: "assets/images/card-10.jpg",
       photoB: "assets/images/siding-detail-2.jpg",
+      photoC: "assets/images/card-11.jpg",
+      splitImage: "assets/images/card-1.jpg",
+      overviewImage: "assets/images/card-2.jpg",
+      circleImage: "assets/images/hero-about.jpg",
       variant: "overlap",
       overview: "Fiber cement siding requests may involve durability expectations, profile selection, trim coordination, installation assumptions, and provider familiarity with the material.",
       searches: [
@@ -115,8 +135,12 @@
       title: "Wood & Composite Siding",
       outline: "Wood",
       image: "assets/images/wood-composite-siding.jpg",
-      photoA: "assets/images/service-alt-2.jpg",
+      photoA: "assets/images/exterior-home-1.jpg",
       photoB: "assets/images/siding-texture-1.jpg",
+      photoC: "assets/images/card-4.jpg",
+      splitImage: "assets/images/card-3.jpg",
+      overviewImage: "assets/images/hero-contact.jpg",
+      circleImage: "assets/images/card-5.jpg",
       variant: "quadrant",
       overview: "Wood-look, composite, and character-driven siding requests often involve texture, profile, maintenance expectations, trim details, and provider familiarity with the chosen direction.",
       searches: [
@@ -168,7 +192,7 @@
         <figure class="image-frame service-photo__image"><img src="${page.photoA}" alt="${E.escapeHtml(altA)}" loading="lazy"></figure>
         <div class="service-photo__stack">
           <figure class="image-frame service-photo__image"><img src="${page.photoB}" alt="${E.escapeHtml(altB)}" loading="lazy"></figure>
-          <figure class="image-frame service-photo__image"><img src="assets/images/siding-detail-1.jpg" alt="Additional siding material detail" loading="lazy"></figure>
+          <figure class="image-frame service-photo__image"><img src="${page.photoC}" alt="${E.escapeHtml(page.title)} siding material detail" loading="lazy"></figure>
         </div>
       </div>`;
   }
@@ -236,7 +260,7 @@
       <section class="service-split-note section-pad" aria-labelledby="service-split-note-title">
   <div class="service-split-note__grid">
     <figure class="service-split-note__media" data-aos="fade-right">
-      <img src="${service.image}" alt="${E.escapeHtml(service.name)} siding provider matching visual" loading="lazy">
+      <img src="${page.splitImage}" alt="${E.escapeHtml(service.name)} siding provider matching visual" loading="lazy">
     </figure>
 
     <div class="service-split-note__panel" data-aos="fade-left">
@@ -278,7 +302,7 @@
             </div>
           </div>
           <figure class="image-frame service-overview__photo" data-aos="fade-left">
-            <img src="${service.image}" alt="${E.escapeHtml(page.title)} siding project visual" loading="lazy">
+            <img src="${page.overviewImage}" alt="${E.escapeHtml(page.title)} siding project visual" loading="lazy">
           </figure>
         </div>
       </section>
@@ -341,7 +365,7 @@
       <span class="service-circle-intro__dots" aria-hidden="true"></span>
 
       <figure class="service-circle-intro__photo">
-        <img src="${service.image}" alt="${E.escapeHtml(service.name)} service overview" loading="lazy">
+        <img src="${page.circleImage}" alt="${E.escapeHtml(service.name)} service overview" loading="lazy">
       </figure>
 
       <span class="service-circle-intro__badge" aria-hidden="true">
