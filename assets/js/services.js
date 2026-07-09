@@ -195,6 +195,44 @@
         ]
       })}
 
+      <section class="service-hex-flow section-pad" aria-labelledby="service-hex-flow-title">
+  <div class="container">
+    <div class="service-hex-flow__head">
+      <div data-aos="fade-right">
+        <span class="eyebrow">Provider comparison flow</span>
+        <h2 id="service-hex-flow-title">
+          A clearer way to compare ${E.escapeHtml(service.name)} options
+        </h2>
+      </div>
+
+      <p data-aos="fade-left">
+        Exterra helps homeowners organize request details, review available local provider options, and decide whether to continue directly with a participating provider.
+      </p>
+    </div>
+
+    <div class="service-hex-flow__steps">
+      ${[
+        ["Share Details", "Describe the project condition, timing, location, and material interests.", "clipboard-edit"],
+        ["Check Availability", "Matching depends on location, service type, provider coverage, and timing.", "map-pin-check"],
+        ["Compare Scope", "Review provider communication, estimate assumptions, materials, and next steps.", "list-checks"],
+        ["Choose Next Step", "Continue only after confirming provider details, credentials, and final terms.", "arrow-up-right"]
+      ]
+        .map(
+          ([title, text, icon], index) => `
+            <article class="service-hex-flow__step" data-aos="fade-up" data-aos-delay="${index * 80}">
+              <div class="service-hex-flow__hex">
+                ${E.icon(icon)}
+                <span>${index + 1}</span>
+              </div>
+              <h3>${title}</h3>
+              <p>${text}</p>
+            </article>`
+        )
+        .join("")}
+    </div>
+  </div>
+</section>
+
       <section class="service-split-note section-pad" aria-labelledby="service-split-note-title">
   <div class="service-split-note__grid">
     <figure class="service-split-note__media" data-aos="fade-right">
