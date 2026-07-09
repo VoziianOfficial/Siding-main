@@ -1510,15 +1510,10 @@ body {
 }
 
 
-/* ================================
-   GLOBAL STICKY SYSTEM FIX
-================================ */
-
 :root {
   --sticky-offset: calc(var(--header-height) + 24px);
 }
 
-/* Header fixed above everything */
 .site-header {
   position: fixed !important;
   top: 0 !important;
@@ -1528,7 +1523,6 @@ body {
   width: 100%;
 }
 
-/* Overlay layers must stay above fixed header */
 .mobile-menu {
   z-index: 5000 !important;
 }
@@ -1545,14 +1539,12 @@ body {
   z-index: 6000 !important;
 }
 
-/* Sticky parents must not clip sticky children */
 .legal-content,
 .sticky-context,
 [data-sticky-context] {
   overflow: visible !important;
 }
 
-/* Common grid parents for sticky blocks */
 .legal-content__grid,
 .sticky-grid,
 [data-sticky-grid] {
@@ -1560,7 +1552,6 @@ body {
   overflow: visible !important;
 }
 
-/* Universal sticky blocks */
 .legal-content__nav,
 .sticky-block,
 .sticky-panel,
@@ -1573,13 +1564,11 @@ body {
   z-index: 20;
 }
 
-/* Legal nav: keep it usable if links are tall */
 .legal-content__nav {
   max-height: calc(100svh - var(--sticky-offset) - 24px);
   overflow-y: auto;
 }
 
-/* Sticky headings should not receive AOS directly */
 .section-heading--sticky[data-aos],
 .legal-content__nav[data-aos],
 .sticky-block[data-aos],
@@ -1589,7 +1578,6 @@ body {
   transform: none !important;
 }
 
-/* Mobile/tablet: sticky usually hurts layout */
 @media (max-width: 900px) {
 
   .legal-content__nav,

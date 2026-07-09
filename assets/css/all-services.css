@@ -287,7 +287,6 @@
 }
 
 
-/* Premium services intro cards */
 .services-intro {
   background: var(--color-white);
 }
@@ -401,7 +400,6 @@
   transform: translateY(-5px) scale(1.08);
 }
 
-/* Compact premium adaptive for services intro */
 @media (max-width: 900px) {
   .services-intro .container {
     width: min(100% - 32px, 760px);

@@ -1132,7 +1132,6 @@
 }
 
 
-/* Home editorial spacing fix for tablet/mobile */
 .home-editorial {
   padding-bottom: 92px;
 }
@@ -1192,10 +1191,6 @@
     height: 380px;
   }
 }
-
-/* =========================================
-   Tablet/Mobile centered layout for key home sections
-========================================= */
 
 @media (max-width: 980px) {
 
@@ -1373,7 +1368,6 @@
   }
 }
 
-/* Fix home intro media overflow on tablet/mobile */
 @media (max-width: 980px) {
   .home-intro__media {
     width: 100%;

@@ -1136,7 +1136,6 @@
 }
 
 
-/* Contact form parallax + sticky info card + styled service select */
 .contact-form {
   position: relative;
   overflow: clip;
@@ -1210,7 +1209,6 @@
   box-shadow: 0 28px 68px rgba(7, 27, 50, 0.2);
 }
 
-/* Styled select arrow for #service */
 #service {
   appearance: none;
   -webkit-appearance: none;
@@ -1337,7 +1335,6 @@
   }
 }
 
-/* Keep form labels aligned left on tablet/mobile */
 .contact-form .field {
   text-align: left;
 }
