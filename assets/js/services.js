@@ -311,16 +311,6 @@
         </div>
       </section>
 
-      <section class="service-photo section-pad" aria-labelledby="photo-title">
-        <div class="container">
-          <div class="section-heading section-heading--center">
-            <span class="eyebrow">Photo-led context</span>
-            <h2 id="photo-title">${E.escapeHtml(page.title)} Visual Direction</h2>
-          </div>
-          <div data-aos="zoom-in">${renderPhotoLayout(page)}</div>
-        </div>
-      </section>
-
       <section class="service-matching section-pad" aria-labelledby="matching-title">
         <div class="container">
           <div class="section-heading">
@@ -345,15 +335,48 @@
         </div>
       </section>
 
-      <section class="service-faq section-pad" aria-labelledby="service-faq-title">
-        <div class="container service-factors__grid">
-          <div class="section-heading">
-            <span class="eyebrow">FAQ</span>
-            <h2 id="service-faq-title">${E.escapeHtml(page.title)} FAQs</h2>
-          </div>
-          <div>${E.faqMarkup(faqData)}</div>
-        </div>
-      </section>
+     <section class="service-circle-intro section-pad" aria-labelledby="service-circle-intro-title">
+  <div class="container service-circle-intro__grid">
+    <div class="service-circle-intro__media" data-aos="fade-right">
+      <span class="service-circle-intro__dots" aria-hidden="true"></span>
+
+      <figure class="service-circle-intro__photo">
+        <img src="${service.image}" alt="${E.escapeHtml(service.name)} service overview" loading="lazy">
+      </figure>
+
+      <span class="service-circle-intro__badge" aria-hidden="true">
+        ${E.icon(service.icon || "panel-top")}
+      </span>
+    </div>
+
+    <div class="service-circle-intro__copy" data-aos="fade-left">
+      <span class="eyebrow service-circle-intro__eyebrow">Service overview</span>
+
+      <h2 id="service-circle-intro-title">
+        Compare provider options for ${E.escapeHtml(service.name)}
+      </h2>
+
+      <p class="service-circle-intro__lead">
+        Exterra helps homeowners organize siding requests and compare available local provider options with clearer project details.
+      </p>
+
+      <p>
+        Use this service path to describe the condition, timing, material direction, and location notes for your project before deciding whether to continue with a participating provider.
+      </p>
+
+      <ul class="service-circle-intro__list">
+        <li>${E.icon("check-circle-2")}<span>Share the project type and visible exterior concerns</span></li>
+        <li>${E.icon("check-circle-2")}<span>Include material interests and timing if known</span></li>
+        <li>${E.icon("check-circle-2")}<span>Review provider availability and scope assumptions</span></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contact.html">
+        <span>Start Your Request</span>
+        ${E.icon("arrow-up-right")}
+      </a>
+    </div>
+  </div>
+</section>
 
       ${E.renderGlobalCta({
         id: `${slug}-cta`,
