@@ -35,7 +35,7 @@
     {
       title: "Material Preference",
       icon: "layers",
-      image: "assets/images/siding-texture-1.jpg",
+      image: "assets/images/card-1.jpg",
       text: "Share whether vinyl, fiber cement, composite, wood-look, or another direction feels closest to your exterior goals."
     },
     {
