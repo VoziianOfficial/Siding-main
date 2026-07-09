@@ -72,7 +72,7 @@
     <div class="services-articles__head">
       <div data-aos="fade-right">
         <span class="eyebrow services-articles__eyebrow">Service paths</span>
-        <h2 id="services-articles-title">Siding Options Homeowners Can Compare</h2>
+        <h2 id="services-articles-title">Siding Options Homeowners Can Compare provider options</h2>
       </div>
       <p data-aos="fade-left">
         Review common siding project directions, then submit a request to compare available local provider options where matching is available.
