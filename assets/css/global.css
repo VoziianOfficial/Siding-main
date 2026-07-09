@@ -946,7 +946,7 @@ body {
 }
 
 .global-cta {
-  padding: 0 0 92px;
+  padding: 92px 0;
   background: var(--color-cream);
 }
 
