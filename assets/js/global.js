@@ -99,7 +99,14 @@
     menu.innerHTML = `
       <div class="mobile-menu__bar">
         <a class="brand-link mobile-menu__brand" href="index.html" aria-label="${escapeHtml(CFG.brand.name)} home">
-          <img src="assets/images/logo.svg" alt="${escapeHtml(CFG.brand.name)}">
+          <svg width="230" height="58" viewBox="0 0 230 58" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escapeHtml(CFG.brand.name)} logo">
+            <path d="M8 28.5L29 10L50 28.5V50H8V28.5Z" fill="#E8D8C3" stroke="#0E2A47" stroke-width="3.2" stroke-linejoin="round"/>
+            <path d="M16 28.5H42M16 36H42M16 43.5H42" stroke="#0E2A47" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M8 28.5L29 10L50 28.5" stroke="#C9362B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M50 28.5H56" stroke="#C9362B" stroke-width="3.2" stroke-linecap="round"/>
+            <text x="66" y="37" font-family="Barlow Condensed, Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">EXTERRA</text>
+            <path d="M68 45H160" stroke="#C9362B" stroke-width="2" stroke-linecap="round"/>
+          </svg>
         </a>
         <button class="icon-button" type="button" aria-label="Close menu" data-mobile-close>${icon("x")}</button>
       </div>

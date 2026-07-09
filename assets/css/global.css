@@ -581,9 +581,10 @@ body {
   min-width: 0;
 }
 
-.mobile-menu__brand img {
-  width: 174px;
-  filter: brightness(0) invert(1) sepia(1) saturate(0.35) hue-rotate(330deg);
+.mobile-menu__brand svg {
+  display: block;
+  width: 148px;
+  height: auto;
 }
 
 .mobile-menu__content {
