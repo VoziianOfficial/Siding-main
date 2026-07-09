@@ -173,3 +173,97 @@
     padding: 1.3rem;
   }
 }
+
+@media (max-width: 980px) {
+  .contact-form .container,
+  .contact-steps .container,
+  .contact-tips .container,
+  .contact-availability .container,
+  .contact-faq .container {
+    width: min(100% - 32px, 760px);
+    margin-inline: auto;
+  }
+
+  .contact-form__grid,
+  .contact-steps__grid,
+  .contact-tips__grid,
+  .contact-faq .about-story__grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    align-items: center;
+    gap: 2.6rem;
+    text-align: center;
+  }
+
+  .contact-form__info,
+  .contact-form__panel,
+  .contact-tips .section-heading,
+  .contact-availability__box,
+  .contact-faq .section-heading {
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .contact-form__info h2,
+  .contact-form__info p,
+  .contact-tips .section-heading h2,
+  .contact-tips__list,
+  .contact-availability__box p,
+  .contact-steps__item h2,
+  .contact-steps__item p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-tips__round {
+    width: 100%;
+    max-width: 430px;
+    margin-inline: auto;
+  }
+
+  .contact-form__info-list,
+  .contact-tips__list {
+    width: 100%;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .contact-form [data-aos],
+  .contact-steps [data-aos],
+  .contact-tips [data-aos],
+  .contact-availability [data-aos],
+  .contact-faq [data-aos] {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-form .container,
+  .contact-steps .container,
+  .contact-tips .container,
+  .contact-availability .container,
+  .contact-faq .container {
+    width: min(100% - 28px, 440px);
+  }
+
+  .contact-form__grid,
+  .contact-steps__grid,
+  .contact-tips__grid,
+  .contact-faq .about-story__grid {
+    gap: 2.1rem;
+  }
+
+  .contact-form__info h2,
+  .contact-tips .section-heading h2,
+  .contact-faq .section-heading h2 {
+    max-width: 420px;
+    font-size: 2.55rem;
+    line-height: 1.05;
+  }
+
+  .contact-steps__grid {
+    grid-template-columns: 1fr !important;
+  }
+}

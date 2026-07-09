@@ -194,15 +194,38 @@
         </div>
       </section>
 
-      <section class="services-faq section-pad" aria-labelledby="services-faq-title">
-        <div class="container about-story__grid">
-          <div class="section-heading">
-            <span class="eyebrow">FAQ</span>
-            <h2 id="services-faq-title">Services FAQs</h2>
-          </div>
-          <div>${E.faqMarkup(faqs)}</div>
-        </div>
-      </section>
+<section class="services-guide section-pad" aria-labelledby="services-guide-title">
+  <div class="container services-guide__grid">
+    <div class="services-guide__copy" data-aos="fade-right">
+      <span class="eyebrow services-guide__eyebrow">Service guidance</span>
+      <h2 id="services-guide-title">Choose the siding path that fits your project stage</h2>
+
+      <p class="services-guide__lead">
+        Exterra helps homeowners organize their siding request before comparing available local provider options.
+      </p>
+
+      <p>
+        Some homeowners are planning a full exterior update, while others need replacement, repair, vinyl siding, fiber cement, or trim-related support. The right service path helps make the first provider conversation clearer.
+      </p>
+
+      <p>
+        Exterra does not perform siding work directly. Participating providers handle their own pricing, scheduling, warranties, licensing, insurance, and final service terms.
+      </p>
+
+      <div class="services-guide__note">
+        <strong>Start with the closest service category, then confirm final scope directly with the provider.</strong>
+        <a href="contact.html">
+          <span>Start Request</span>
+          ${E.icon("arrow-up-right")}
+        </a>
+      </div>
+    </div>
+
+    <figure class="image-frame services-guide__photo" data-aos="fade-left">
+      <img src="assets/images/siding-detail-1.jpg" alt="Siding panels and exterior service detail" loading="lazy">
+    </figure>
+  </div>
+</section>
 
       <section class="services-disclaimer section-pad-sm" aria-labelledby="service-disclaimer-title">
         <div class="container">
@@ -215,6 +238,17 @@
           </div>
         </div>
       </section>
+
+      <section class="services-faq section-pad" aria-labelledby="services-faq-title">
+        <div class="container about-story__grid">
+          <div class="section-heading">
+            <span class="eyebrow">FAQ</span>
+            <h2 id="services-faq-title">Services FAQs</h2>
+          </div>
+          <div>${E.faqMarkup(faqs)}</div>
+        </div>
+      </section>
+
 
       ${E.renderGlobalCta({
         id: "services-cta",

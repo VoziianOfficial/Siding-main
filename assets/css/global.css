@@ -1607,3 +1607,81 @@ body {
 .page-hero__title {
   margin-top: 2.4rem;
 }
+
+@media (max-width: 980px) {
+  main,
+  section,
+  [data-page-root] {
+    overflow-x: clip;
+  }
+
+  .container {
+    margin-inline: auto;
+  }
+
+  .section-heading,
+  .hero-actions,
+  .cta-actions {
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .section-heading,
+  .section-heading--center,
+  .section-heading--sticky {
+    padding-left: 0 !important;
+  }
+
+  [data-page-root] h1,
+  [data-page-root] h2,
+  [data-page-root] h3,
+  [data-page-root] p,
+  [data-page-root] ul,
+  [data-page-root] .mini-disclaimer,
+  [data-page-root] .form-status,
+  [data-page-root] .eyebrow,
+  [data-page-root] .outline-word {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [data-page-root] img,
+  [data-page-root] picture,
+  [data-page-root] figure {
+    max-width: 100%;
+  }
+
+  .section-heading--sticky,
+  [data-sticky="true"] {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+@media (max-width: 680px) {
+  main,
+  section,
+  [data-page-root] {
+    overflow-x: clip;
+  }
+
+  [data-page-root] h1,
+  [data-page-root] h2,
+  [data-page-root] .section-heading h2,
+  [data-page-root] .global-cta h2 {
+    max-width: 420px;
+    line-height: 1.05;
+  }
+
+  [data-page-root] .btn,
+  [data-page-root] .icon-button,
+  [data-page-root] [class*="badge"],
+  [data-page-root] [class*="note"],
+  [data-page-root] [class*="meta"] {
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+}

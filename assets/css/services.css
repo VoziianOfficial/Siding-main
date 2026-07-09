@@ -199,3 +199,94 @@
     min-height: 330px;
   }
 }
+
+@media (max-width: 980px) {
+  .service-overview .container,
+  .service-searches .container,
+  .service-factors .container,
+  .service-photo .container,
+  .service-matching .container,
+  .service-faq .container {
+    width: min(100% - 32px, 760px);
+    margin-inline: auto;
+  }
+
+  .service-overview__grid,
+  .service-searches__grid,
+  .service-factors__grid,
+  .service-matching__steps,
+  .service-faq .service-factors__grid {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    align-items: center;
+    gap: 2.6rem;
+    text-align: center;
+  }
+
+  .service-overview .section-heading,
+  .service-factors .section-heading,
+  .service-faq .section-heading {
+    justify-items: center;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .service-overview h2,
+  .service-overview p,
+  .service-searches h2,
+  .service-searches__item p,
+  .service-factors h2,
+  .service-faq h2 {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-overview__photo,
+  .service-photo__image,
+  .service-photo__layout--round .service-photo__image:first-child,
+  .service-photo__layout--quadrant .service-photo__image:first-child,
+  .service-photo__layout--tall .service-photo__image:first-child,
+  .service-photo__layout--tall .service-photo__image:last-child {
+    width: 100%;
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .service-searches [data-aos],
+  .service-overview [data-aos],
+  .service-factors [data-aos],
+  .service-photo [data-aos],
+  .service-matching [data-aos],
+  .service-faq [data-aos] {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .service-overview .container,
+  .service-searches .container,
+  .service-factors .container,
+  .service-photo .container,
+  .service-matching .container,
+  .service-faq .container {
+    width: min(100% - 28px, 440px);
+  }
+
+  .service-overview__grid,
+  .service-searches__grid,
+  .service-factors__grid,
+  .service-matching__steps,
+  .service-faq .service-factors__grid {
+    gap: 2.1rem;
+  }
+
+  .service-overview h2,
+  .service-searches h2,
+  .service-factors h2,
+  .service-faq h2 {
+    max-width: 420px;
+    font-size: 2.55rem;
+    line-height: 1.05;
+  }
+}
