@@ -822,6 +822,15 @@ body {
   font-weight: 700;
 }
 
+.hero-search-results {
+  width: min(840px, 100%);
+  margin-top: 0.75rem;
+}
+
+.hero-search-results[hidden] {
+  display: none;
+}
+
 .hero-tags {
   display: flex;
   flex-wrap: wrap;

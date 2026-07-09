@@ -167,10 +167,8 @@
     document.body.appendChild(overlay);
   }
 
-  function matchServices(query) {
-    const q = String(query || "").trim().toLowerCase();
-    if (!q) return services;
-    const aliases = {
+  function searchAliases() {
+    return {
       install: "Siding Installation",
       installation: "Siding Installation",
       new: "Siding Installation",
@@ -186,9 +184,39 @@
       composite: "Wood & Composite Siding",
       wood: "Wood & Composite Siding"
     };
+  }
+
+  function resultMarkup(service) {
+    return `<a href="${service.url}">${escapeHtml(service.name)}<br><small>${escapeHtml(service.short)}</small></a>`;
+  }
+
+  function matchServices(query) {
+    const q = String(query || "").trim().toLowerCase();
+    if (!q) return services;
+    const aliases = searchAliases();
     const aliasHit = Object.keys(aliases).find((key) => q.includes(key));
     if (aliasHit) return services.filter((service) => service.name === aliases[aliasHit]);
-    return services.filter((service) => `${service.name} ${service.short}`.toLowerCase().includes(q));
+    const ranked = services
+      .map((service) => {
+        const name = service.name.toLowerCase();
+        const short = service.short.toLowerCase();
+        const nameWords = name.split(/[^a-z0-9&]+/).filter(Boolean);
+        const shortWords = short.split(/[^a-z0-9&]+/).filter(Boolean);
+        let score = 0;
+
+        if (name === q) score += 1000;
+        if (name.startsWith(q)) score += 900;
+        if (nameWords.some((word) => word.startsWith(q))) score += 700;
+        if (shortWords.some((word) => word.startsWith(q))) score += 320;
+        if (name.includes(q)) score += 220;
+        if (short.includes(q)) score += 110;
+
+        return { service, score };
+      })
+      .filter((entry) => entry.score > 0)
+      .sort((a, b) => b.score - a.score || a.service.name.localeCompare(b.service.name));
+
+    return ranked.map((entry) => entry.service);
   }
 
   function renderSearchResults(query) {
@@ -199,9 +227,26 @@
       target.innerHTML = `<p>Try siding installation, replacement, repair, vinyl, fiber cement, or wood composite.</p>`;
       return;
     }
-    target.innerHTML = matches
-      .map((service) => `<a href="${service.url}">${escapeHtml(service.name)}<br><small>${escapeHtml(service.short)}</small></a>`)
-      .join("");
+    target.innerHTML = matches.map((service) => resultMarkup(service)).join("");
+  }
+
+  function renderHeroSearchResults(form, query) {
+    const target = form ? form.nextElementSibling : null;
+    if (!target || !target.matches("[data-hero-search-results]")) return;
+    const q = String(query || "").trim();
+    if (!q) {
+      target.innerHTML = "";
+      target.hidden = true;
+      return;
+    }
+    const matches = matchServices(q).slice(0, 4);
+    if (!matches.length) {
+      target.innerHTML = `<p>Try siding installation, replacement, repair, vinyl, fiber cement, or wood composite.</p>`;
+      target.hidden = false;
+      return;
+    }
+    target.innerHTML = matches.map((service) => resultMarkup(service)).join("");
+    target.hidden = false;
   }
 
   function openSearch(seed) {
@@ -354,6 +399,9 @@
       if (event.target.matches("#site-search-input")) {
         renderSearchResults(event.target.value);
       }
+      if (event.target.closest("[data-site-search]")) {
+        renderHeroSearchResults(event.target.closest("[data-site-search]"), event.target.value);
+      }
     });
 
     document.addEventListener("submit", (event) => {
@@ -467,6 +515,7 @@
                   <input id="${escapeHtml(options.id)}-search" type="search" placeholder="${escapeHtml(options.search.placeholder)}">
                   <button class="btn btn-primary" type="submit"><span>${escapeHtml(options.search.button)}</span>${icon("search")}</button>
                 </form>
+                <div class="search-results hero-search-results" data-hero-search-results hidden aria-live="polite"></div>
                 <div class="hero-tags" data-aos="fade-up" data-aos-delay="220">
                   ${quickTags.map((tag) => `<a href="${escapeHtml(tag.href)}">${escapeHtml(tag.label)}</a>`).join("")}
                 </div>`
