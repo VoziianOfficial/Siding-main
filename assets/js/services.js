@@ -195,6 +195,39 @@
         ]
       })}
 
+      <section class="service-split-note section-pad" aria-labelledby="service-split-note-title">
+  <div class="service-split-note__grid">
+    <figure class="service-split-note__media" data-aos="fade-right">
+      <img src="${service.image}" alt="${E.escapeHtml(service.name)} siding provider matching visual" loading="lazy">
+    </figure>
+
+    <div class="service-split-note__panel" data-aos="fade-left">
+      <div class="service-split-note__icons" aria-hidden="true">
+        ${E.icon(service.icon || "panel-top")}
+        ${E.icon("clipboard-list")}
+        ${E.icon("search-check")}
+      </div>
+
+      <h2 id="service-split-note-title">
+        Compare local provider options for ${E.escapeHtml(service.name)}
+      </h2>
+
+      <p class="service-split-note__lead">
+        Exterra helps homeowners organize project details, review available provider paths, and decide whether to continue with a local siding provider.
+      </p>
+
+      <p>
+        Share the condition, material direction, timing, and location notes for your siding request. Participating providers independently handle their own pricing, scheduling, warranties, licensing, insurance, and final service terms.
+      </p>
+
+      <a class="service-split-note__link" href="contact.html">
+        <span>Start Request</span>
+        ${E.icon("plus")}
+      </a>
+    </div>
+  </div>
+</section>
+
       <section class="service-overview section-pad" aria-labelledby="overview-title">
         <div class="container service-overview__grid">
           <div data-aos="fade-right">
