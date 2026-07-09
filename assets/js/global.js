@@ -443,10 +443,9 @@
     return `
       <section class="page-hero ${options.className || ""}" style="background-image: url('${escapeHtml(options.image)}')" aria-labelledby="${escapeHtml(options.id)}-title">
         <div class="page-hero__inner">
-          <div class="page-hero__copy" data-aos="fade-up">
-            <span class="page-hero__outline" aria-hidden="true">${escapeHtml(options.outline)}</span>
-            <span class="eyebrow page-hero__label">${escapeHtml(options.label || CFG.brand.tagline)}</span>
-            <h1 class="page-hero__title" id="${escapeHtml(options.id)}-title">${titleMarkup}</h1>
+         <div class="page-hero__copy" data-aos="fade-up">
+  <span class="page-hero__outline" aria-hidden="true">${escapeHtml(options.outline)}</span>
+  <h1 class="page-hero__title" id="${escapeHtml(options.id)}-title">${titleMarkup}</h1>
             <p class="page-hero__text">${escapeHtml(options.text)}</p>
             <div class="hero-actions">
               ${(options.buttons || [])
