@@ -10,7 +10,10 @@
 }
 
 .service-overview__photo {
+  display: block;
+  height: 100%;
   min-height: 540px;
+  margin: 0;
 }
 
 .service-overview__label {
