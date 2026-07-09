@@ -378,6 +378,27 @@
   </div>
 </section>
 
+<section class="service-trust-strip section-pad-sm" aria-label="Service comparison notes">
+  <div class="container service-trust-strip__grid">
+    ${[
+        ["Material Direction", "Share siding type, color direction, trim details, and visible exterior conditions.", "layers"],
+        ["Provider Verification", "Homeowners should confirm licensing, insurance, references, and written terms directly.", "shield-check"],
+        ["Clear Estimate Review", "Compare scope assumptions, exclusions, timing, and next-step details before choosing.", "file-search"]
+      ]
+        .map(
+          ([title, text, icon], index) => `
+          <article class="service-trust-strip__item" data-aos="fade-up" data-aos-delay="${index * 70}">
+            <span class="service-trust-strip__icon">${E.icon(icon)}</span>
+            <div>
+              <h2>${title}</h2>
+              <p>${text}</p>
+            </div>
+          </article>`
+        )
+        .join("")}
+  </div>
+</section>
+
       ${E.renderGlobalCta({
         id: `${slug}-cta`,
         title: `Compare ${page.title} Provider Options`,
