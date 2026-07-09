@@ -57,6 +57,42 @@
         </div>
       </section>
 
+      <section class="about-growth section-pad" aria-labelledby="about-growth-title">
+  <div class="container about-growth__grid">
+    <div class="about-growth__media" data-aos="fade-right">
+      <figure class="image-frame about-growth__photo about-growth__photo--top">
+        <img src="assets/images/hero-home.jpg" alt="Modern siding exterior project detail" loading="lazy">
+      </figure>
+
+      <figure class="image-frame about-growth__photo about-growth__photo--bottom">
+        <img src="assets/images/siding-detail-2.jpg" alt="Close siding panels and trim detail" loading="lazy">
+      </figure>
+    </div>
+
+    <div class="about-growth__copy" data-aos="fade-left">
+      <span class="eyebrow about-growth__eyebrow">About Exterra</span>
+      <h2 id="about-growth-title">How We Help Homeowners Compare Siding Options</h2>
+
+      <p class="about-growth__lead">
+        Exterra gives homeowners a clearer way to organize siding project details and review available local provider options before choosing a next step.
+      </p>
+
+      <p>
+        The platform is designed around practical exterior questions: project type, material direction, timing, location, replacement needs, repair concerns, and provider availability.
+      </p>
+
+      <p>
+        We do not perform siding work directly. Participating providers remain responsible for their own pricing, scheduling, warranties, licensing, insurance, and final service terms.
+      </p>
+
+      <div class="about-growth__note">
+        <strong>A clearer matching platform for siding installation, replacement, repair, and material comparison.</strong>
+        <span class="about-growth__mark">Exterra</span>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section class="about-service-lines section-pad" aria-labelledby="about-service-lines-title">
   <div class="container">
     <div class="about-service-lines__head" data-aos="fade-up">
