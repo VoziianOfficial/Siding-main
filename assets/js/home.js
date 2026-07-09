@@ -180,7 +180,7 @@
       <section class="home-process section-pad" aria-labelledby="process-title">
         <div class="container">
           <div class="section-heading">
-            <span class="outline-word" aria-hidden="true">Process</span>
+            
             <span class="eyebrow">Matching flow</span>
             <h2 id="process-title">A Clearer Path From Request To Review</h2>
             <p>Exterra keeps the process focused on comparison and clarity while providers handle their own estimates, scheduling, and service terms.</p>
@@ -201,30 +201,6 @@
                   </article>`
               )
               .join("")}
-          </div>
-        </div>
-      </section>
-
-      <section class="home-quadrant section-pad" aria-labelledby="compare-title">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Comparison lens</span>
-            <h2 id="compare-title">What Homeowners Usually Compare</h2>
-          </div>
-          <div class="home-quadrant__grid">
-            <figure class="image-frame home-quadrant__large" data-aos="zoom-in"><img src="assets/images/siding-detail-2.jpg" alt="Siding profile and exterior trim detail" loading="lazy"></figure>
-            <div class="home-quadrant__stack">
-              <div class="home-quadrant__text home-quadrant__text--dark" data-aos="fade-up">
-                <h3>Material Direction</h3>
-                <p>Vinyl, fiber cement, composite, wood-look finishes, trim details, and color direction.</p>
-              </div>
-              <figure class="image-frame home-quadrant__small" data-aos="fade-up"><img src="assets/images/siding-texture-1.jpg" alt="Siding texture closeup" loading="lazy"></figure>
-              <figure class="image-frame home-quadrant__small" data-aos="fade-up"><img src="assets/images/exterior-home-2.jpg" alt="Exterior home facade for siding comparison" loading="lazy"></figure>
-              <div class="home-quadrant__text home-quadrant__text--beige" data-aos="fade-up">
-                <h3>Estimate Clarity</h3>
-                <p>Scope details, material assumptions, timing, access notes, and provider-specific terms.</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

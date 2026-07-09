@@ -166,21 +166,6 @@
         </div>
       </section>
 
-      <section class="about-dark section-pad" aria-labelledby="dark-title">
-        <div class="container about-dark__grid">
-          <div class="about-dark__photos" data-aos="fade-right">
-            <figure class="image-frame about-dark__photo-a"><img src="assets/images/siding-detail-2.jpg" alt="Siding panel detail on a modern exterior" loading="lazy"></figure>
-            <figure class="image-frame about-dark__photo-b"><img src="assets/images/exterior-home-2.jpg" alt="House exterior with siding and trim" loading="lazy"></figure>
-          </div>
-          <div data-aos="fade-left">
-            <span class="eyebrow">Matching, not contracting</span>
-            <h2 id="dark-title">Designed Around Better Provider Conversations</h2>
-            <p>Exterra gives homeowners a more organized way to begin. The provider you choose, if any, is responsible for the final service relationship and terms.</p>
-            <div class="hero-actions"><a class="btn btn-primary" href="contact.html"><span>Start A Request</span>${E.icon("arrow-up-right")}</a></div>
-          </div>
-        </div>
-      </section>
-
       <section class="about-factors section-pad" aria-labelledby="about-faq-title">
         <div class="container about-story__grid">
           <div class="section-heading">

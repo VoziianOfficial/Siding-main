@@ -67,30 +67,6 @@
         </div>
       </section>
 
-      <section class="services-showcase section-pad" aria-labelledby="showcase-title">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Service paths</span>
-            <h2 id="showcase-title">Find The Siding Category Closest To Your Project</h2>
-          </div>
-          <div class="services-showcase__grid">
-            ${E.services
-              .map(
-                (service, index) => `
-                  <a class="services-showcase__card" href="${service.url}" data-aos="fade-up" data-aos-delay="${index * 60}">
-                    <img src="${service.image}" alt="${E.escapeHtml(service.name)} siding project visual" loading="lazy">
-                    <div class="services-showcase__content">
-                      <h2>${E.escapeHtml(service.name)}</h2>
-                      <p>${E.escapeHtml(service.short)}</p>
-                      <span>Review options</span>
-                    </div>
-                  </a>`
-              )
-              .join("")}
-          </div>
-        </div>
-      </section>
-
       <section class="services-switcher section-pad" aria-labelledby="switcher-title">
         <div class="container services-switcher__grid">
           <figure class="image-frame services-switcher__image" data-service-switch-image data-aos="fade-right">
@@ -107,27 +83,6 @@
                   <button class="services-switcher__button${index === 0 ? " is-active" : ""}" type="button" data-service-switch="${index}">
                     ${E.icon(service.icon || "panel-top")}<span>${E.escapeHtml(service.name)}</span>
                   </button>`
-              )
-              .join("")}
-          </div>
-        </div>
-      </section>
-
-      <section class="services-material section-pad" aria-labelledby="material-title">
-        <div class="container">
-          <div class="section-heading section-heading--center">
-            <span class="eyebrow">Material comparison</span>
-            <h2 id="material-title">Common Siding Directions To Discuss</h2>
-          </div>
-          <div class="services-material__band">
-            ${materials
-              .map(
-                ([title, text, icon], index) => `
-                  <article class="services-material__item" data-aos="fade-up" data-aos-delay="${index * 70}">
-                    <span class="icon-line">${E.icon(icon)}</span>
-                    <h3>${title}</h3>
-                    <p>${text}</p>
-                  </article>`
               )
               .join("")}
           </div>
@@ -152,50 +107,6 @@
                   </article>`
               )
               .join("")}
-          </div>
-        </div>
-      </section>
-
-      <section class="services-slider section-pad" aria-labelledby="path-slider-title">
-        <div class="container">
-          <div class="home-slider__top">
-            <div class="section-heading">
-              <span class="eyebrow">Service path slider</span>
-              <h2 id="path-slider-title">Swipe Through Siding Options</h2>
-            </div>
-            <div class="home-slider__controls">
-              <button class="icon-button services-prev" type="button" aria-label="Previous service">${E.icon("arrow-left")}</button>
-              <button class="icon-button services-next" type="button" aria-label="Next service">${E.icon("arrow-right")}</button>
-            </div>
-          </div>
-          <div class="swiper services-path-swiper">
-            <div class="swiper-wrapper">
-              ${E.services
-                .map(
-                  (service) => `
-                    <div class="swiper-slide">
-                      <a class="services-slider__card" href="${service.url}">
-                        <img src="${service.image}" alt="${E.escapeHtml(service.name)} visual" loading="lazy">
-                        <div class="services-slider__copy"><h3>${E.escapeHtml(service.name)}</h3><p>${E.escapeHtml(service.short)}</p></div>
-                      </a>
-                    </div>`
-                )
-                .join("")}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="services-editorial section-pad" aria-labelledby="editorial-title">
-        <div class="container services-editorial__grid">
-          <div class="section-heading" data-aos="fade-right">
-            <span class="eyebrow">Editorial view</span>
-            <h2 id="editorial-title">A Better Request Helps Providers Understand The Project</h2>
-            <p>Share visible condition, location, material direction, and timing so available provider options can be compared with more context.</p>
-          </div>
-          <div class="services-editorial__photos" data-aos="fade-left">
-            <figure class="image-frame services-editorial__photo-a"><img src="assets/images/siding-detail-3.jpg" alt="Detailed siding and trim view" loading="lazy"></figure>
-            <figure class="image-frame services-editorial__photo-b"><img src="assets/images/exterior-home-1.jpg" alt="Home exterior with updated siding" loading="lazy"></figure>
           </div>
         </div>
       </section>

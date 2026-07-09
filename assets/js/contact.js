@@ -42,25 +42,6 @@
         ]
       })}
 
-      <section class="contact-strip section-pad-sm" aria-labelledby="contact-strip-title">
-        <div class="container contact-strip__grid">
-          ${[
-            ["Phone", `<a href="${E.CFG.contact.phoneHref}">${E.CFG.contact.phoneDisplay}</a>`, "phone"],
-            ["Email", `<a href="${E.CFG.contact.emailHref}">${E.CFG.contact.email}</a>`, "mail"],
-            ["Service Area", E.CFG.company.serviceArea, "map-pin"],
-            ["Response Note", "Provider availability may vary by location and project type.", "clock"]
-          ]
-            .map(
-              ([title, html, icon], index) => `
-                <article class="contact-strip__item" data-aos="fade-up" data-aos-delay="${index * 70}">
-                  ${E.icon(icon)}
-                  <div><h2 id="${index === 0 ? "contact-strip-title" : ""}">${title}</h2><p>${html}</p></div>
-                </article>`
-            )
-            .join("")}
-        </div>
-      </section>
-
       <section class="contact-form section-pad" id="contact-form" aria-labelledby="form-title">
         <div class="container">
           <div class="contact-form__grid">
