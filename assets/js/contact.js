@@ -42,6 +42,29 @@
         ]
       })}
 
+      <section class="contact-info-cards section-pad-sm" aria-label="Contact information">
+  <div class="container contact-info-cards__grid">
+    ${[
+        ["Call", "Speak with our matching team", "phone", "tel:+10000000000"],
+        ["Email", "Send project details anytime", "mail", "mailto:info@example.com"],
+        ["Location", "Independent provider matching", "map-pin", "contact.html"],
+        ["Request", "Start a siding comparison request", "clipboard-edit", "#contact-form"]
+      ]
+        .map(
+          ([title, text, icon, href], index) => `
+          <a class="contact-info-cards__item" href="${href}" data-aos="fade-up" data-aos-delay="${index * 70}">
+            <span class="contact-info-cards__icon">${E.icon(icon)}</span>
+            <span class="contact-info-cards__content">
+              <strong>${title}</strong>
+              <small>${text}</small>
+            </span>
+            <span class="contact-info-cards__arrow">${E.icon("arrow-up-right")}</span>
+          </a>`
+        )
+        .join("")}
+  </div>
+</section>
+
       <section class="contact-guidance section-pad" aria-labelledby="contact-guidance-title">
   <div class="container contact-guidance__grid">
     <figure class="image-frame contact-guidance__photo" data-aos="fade-right">
@@ -82,6 +105,46 @@
           <span>Choose whether to continue after review</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-request-lines section-pad" aria-labelledby="contact-request-lines-title">
+  <div class="container">
+    <div class="contact-request-lines__head" data-aos="fade-up">
+      <span class="eyebrow contact-request-lines__eyebrow">What you can request</span>
+      <h2 id="contact-request-lines-title">Common Siding Request</h2>
+      <p>
+        Use the contact page to describe your project clearly, then review available local provider options where matching is available.
+      </p>
+    </div>
+
+    <div class="contact-request-lines__grid">
+      ${[
+        ["New Siding", "Share plans for a fresh exterior update and compare local provider options.", "house-plus", "siding-installation.html"],
+        ["Replace Old Siding", "Request help comparing providers for aging panels, dated materials, or broader replacement work.", "replace", "siding-replacement.html"],
+        ["Repair Damage", "Describe cracks, loose panels, gaps, storm impact, or visible exterior concerns.", "badge-alert", "siding-repair.html"]
+      ]
+        .map(
+          ([title, text, icon, href], index) => `
+            <a class="contact-request-lines__item" href="${href}" data-aos="fade-up" data-aos-delay="${index * 80}">
+              <span class="contact-request-lines__icon">${E.icon(icon)}</span>
+              <span class="contact-request-lines__content">
+                <strong>${title}</strong>
+                <small>${text}</small>
+              </span>
+              <span class="contact-request-lines__arrow">${E.icon("arrow-down-right")}</span>
+            </a>`
+        )
+        .join("")}
+    </div>
+
+    <div class="contact-request-lines__action" data-aos="fade-up">
+      <a class="contact-request-lines__button" href="all-services.html">
+        <span>View All Services</span>
+        ${E.icon("arrow-down-right")}
+      </a>
     </div>
   </div>
 </section>
