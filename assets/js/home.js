@@ -191,6 +191,39 @@
   </div>
 </section>
 
+<section class="home-editorial section-pad" aria-labelledby="home-editorial-title">
+  <div class="container home-editorial__grid">
+    <div class="home-editorial__copy" data-aos="fade-right">
+      <span class="eyebrow">Welcome to Exterra</span>
+      <h2 id="home-editorial-title">A clearer way to compare siding provider options.</h2>
+
+      <p class="home-editorial__lead">
+        Exterra helps homeowners organize siding project details, understand available service paths, and compare local provider options before deciding what comes next.
+      </p>
+
+      <p>
+        We do not perform siding work directly and we do not present ourselves as a contractor, installer, repair company, inspector, or material supplier. The platform is designed to make the request process clearer, so participating providers can better understand project type, timing, material direction, and location before follow-up.
+      </p>
+
+      <div class="home-editorial__meta">
+        <div class="home-editorial__mark">
+          ${E.icon("shield-check")}
+        </div>
+        <div>
+          <strong>Independent matching platform</strong>
+          <span>Provider availability, pricing, scheduling, warranties, licensing, insurance, and final service terms remain with each participating provider.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-editorial__media" data-aos="fade-left">
+  <figure class="image-frame home-editorial__photo home-editorial__photo--single">
+    <img src="assets/images/card-1.jpg" alt="Modern home exterior with siding" loading="lazy">
+  </figure>
+</div>
+  </div>
+</section>
+
       <section class="home-slider section-pad" aria-labelledby="popular-title">
         <div class="container">
           <div class="home-slider__top">
