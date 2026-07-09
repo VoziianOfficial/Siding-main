@@ -67,6 +67,51 @@
         </div>
       </section>
 
+      <section class="services-articles section-pad" aria-labelledby="services-articles-title">
+  <div class="container">
+    <div class="services-articles__head">
+      <div data-aos="fade-right">
+        <span class="eyebrow services-articles__eyebrow">Service paths</span>
+        <h2 id="services-articles-title">Siding Options Homeowners Can Compare</h2>
+      </div>
+      <p data-aos="fade-left">
+        Review common siding project directions, then submit a request to compare available local provider options where matching is available.
+      </p>
+    </div>
+
+    <div class="services-articles__grid">
+      ${E.services
+        .map(
+          (service, index) => `
+            <article class="services-articles__card" data-aos="fade-up" data-aos-delay="${index * 70}">
+              <a class="services-articles__image" href="${service.url}" aria-label="View ${E.escapeHtml(service.name)}">
+                <img src="${service.image}" alt="${E.escapeHtml(service.name)} siding service option" loading="lazy">
+              </a>
+
+              <div class="services-articles__meta">
+                <span>${E.icon(service.icon || "panel-top")} Provider matching</span>
+    
+              </div>
+
+              <span class="services-articles__badge">${String(index + 1).padStart(2, "0")}</span>
+
+              <div class="services-articles__copy">
+                <h3>
+                  <a href="${service.url}">${E.escapeHtml(service.name)}</a>
+                </h3>
+                <p>${E.escapeHtml(service.short)}</p>
+                <a class="services-articles__link" href="${service.url}">
+                  <span>Review Service</span>
+                  ${E.icon("arrow-up-right")}
+                </a>
+              </div>
+            </article>`
+        )
+        .join("")}
+    </div>
+  </div>
+</section>
+
       <section class="services-about section-pad" aria-labelledby="services-about-title">
   <div class="container services-about__grid">
     <div class="services-about__copy" data-aos="fade-right">
