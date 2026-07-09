@@ -1046,9 +1046,11 @@ body {
   min-width: 0;
 }
 
-.footer-brand .brand-link img {
-  width: 200px;
-  filter: brightness(0) invert(1) sepia(1) saturate(0.35) hue-rotate(330deg);
+.footer-brand .brand-link svg {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-title {
