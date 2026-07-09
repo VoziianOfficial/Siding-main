@@ -285,3 +285,217 @@
     min-height: 300px;
   }
 }
+
+
+/* Premium services intro cards */
+.services-intro {
+  background: var(--color-white);
+}
+
+.services-intro .container {
+  width: min(100% - 40px, 1320px);
+}
+
+.services-intro__strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  background: transparent;
+}
+
+.services-intro__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-between;
+  min-height: 230px;
+  overflow: hidden;
+  border: 1px solid rgba(14, 42, 71, 0.12);
+  border-radius: var(--radius-card);
+  background: var(--color-beige-soft);
+  padding: 1.8rem 1.7rem;
+  box-shadow: 0 16px 34px rgba(7, 27, 50, 0.07);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.services-intro__item::before {
+  content: "";
+  position: absolute;
+  left: 1.7rem;
+  top: 0;
+  width: 72px;
+  height: 4px;
+  background: var(--color-red);
+  transform: scaleX(0.45);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+
+.services-intro__item::after {
+  content: "";
+  position: absolute;
+  right: -54px;
+  bottom: -54px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(201, 54, 43, 0.18);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.services-intro__item svg {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  width: 48px;
+  height: 48px;
+  color: var(--color-red);
+  stroke-width: 1.7;
+  transition: transform 0.28s ease, color 0.28s ease;
+}
+
+.services-intro__item div {
+  position: relative;
+  z-index: 1;
+  max-width: 82%;
+  padding-top: 2.5rem;
+}
+
+.services-intro__item h2 {
+  color: var(--color-blue-dark);
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.services-intro__item p {
+  margin-top: 0.85rem;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.services-intro__item:hover {
+  z-index: 2;
+  transform: translateY(-7px);
+  border-color: rgba(201, 54, 43, 0.34);
+  background: var(--color-white);
+  box-shadow: 0 28px 58px rgba(7, 27, 50, 0.14);
+}
+
+.services-intro__item:hover::before {
+  transform: scaleX(1);
+}
+
+.services-intro__item:hover::after {
+  opacity: 1;
+  transform: translate(-14px, -14px);
+}
+
+.services-intro__item:hover svg {
+  color: var(--color-blue);
+  transform: translateY(-5px) scale(1.08);
+}
+
+/* Compact premium adaptive for services intro */
+@media (max-width: 900px) {
+  .services-intro .container {
+    width: min(100% - 32px, 760px);
+  }
+
+  .services-intro__strip {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    background: transparent;
+  }
+
+  .services-intro__item {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 0.9rem;
+    align-items: center;
+    min-height: 118px;
+    padding: 1rem 1.15rem;
+    text-align: left;
+  }
+
+  .services-intro__item::before {
+    left: 0;
+    top: 1rem;
+    bottom: 1rem;
+    width: 4px;
+    height: auto;
+    transform: scaleY(0.5);
+    transform-origin: center;
+  }
+
+  .services-intro__item:hover::before {
+    transform: scaleY(1);
+  }
+
+  .services-intro__item::after {
+    display: none;
+  }
+
+  .services-intro__item svg {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 42px;
+    height: 42px;
+  }
+
+  .services-intro__item div {
+    max-width: none;
+    padding-top: 0;
+  }
+
+  .services-intro__item h2 {
+    font-size: 1.85rem;
+  }
+
+  .services-intro__item p {
+    margin-top: 0.35rem;
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+
+  .services-intro__item:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-intro .container {
+    width: min(100% - 28px, 440px);
+  }
+
+  .services-intro__strip {
+    gap: 0.65rem;
+  }
+
+  .services-intro__item {
+    grid-template-columns: 46px 1fr;
+    min-height: 104px;
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+  }
+
+  .services-intro__item svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .services-intro__item h2 {
+    font-size: 1.6rem;
+  }
+
+  .services-intro__item p {
+    font-size: 0.88rem;
+    line-height: 1.42;
+  }
+}
